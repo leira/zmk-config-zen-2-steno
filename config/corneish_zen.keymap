@@ -6,9 +6,8 @@
 #define NUMBER 1
 #define SYMBOL 2
 #define FUNKEY 3
-#define PLOVER 4
-#define MEDIA  5
-#define HIDDEN 6
+#define MEDIA  4
+#define HIDDEN 5
 
 / {
     chosen {
@@ -93,21 +92,6 @@
             >;
         };
 
-        plover_layer {
-            display-name = "PLOVER";
-            bindings = <
-// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp PLV_X1    &kp PLV_SL    &kp PLV_TL    &kp PLV_PL    &kp PLV_HL    &kp PLV_ST       &kp PLV_ST    &kp PLV_FR    &kp PLV_PR    &kp PLV_LR    &kp PLV_TR    &kp PLV_DR
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp PLV_X2    &kp PLV_SL    &kp PLV_KL    &kp PLV_WL    &kp PLV_RL    &kp PLV_ST       &kp PLV_ST    &kp PLV_RR    &kp PLV_BR    &kp PLV_GR    &kp PLV_SR    &kp PLV_ZR
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┤─────────────┼─────────────┤─────────────┼─────────────┤
-     &kp PLV_X3    &kp PLV_X4    &kp PLV_X5    &kp PLV_X6    &kp PLV_X7    &kp PLV_X8       &kp PLV_X9    &kp PLV_X10   &kp PLV_X11   &kp PLV_X12   &mo MEDIA     &kp PLV_X13
-// ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                               &kp PLV_NM    &kp PLV_A     &kp PLV_O        &kp PLV_E     &kp PLV_U     &kp PLV_NM
-//                                           ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────╯
-            >;
-        };
-
         media_layer {
             label = "MEDIA";
             bindings = <
@@ -129,9 +113,9 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &trans        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &trans        &trans        &trans        &trans        &trans        &trans
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &trans        &trans        &trans        &trans        &trans        &to PLOVER       &trans        &trans        &trans        &trans        &trans        &trans
+     &trans        &trans        &trans        &trans        &trans        &trans           &trans        &trans        &trans        &trans        &trans        &trans
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┤─────────────┼─────────────┤─────────────┼─────────────┤
-     &bt BT_CLR    &trans        &trans        &trans        &trans        &to QWERTY       &trans        &trans        &trans        &trans        &trans        &trans
+     &bt BT_CLR    &trans        &trans        &trans        &trans        &trans           &trans        &trans        &trans        &trans        &trans        &trans
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                &trans        &trans        &trans           &trans        &trans        &trans
 //                                           ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────╯
